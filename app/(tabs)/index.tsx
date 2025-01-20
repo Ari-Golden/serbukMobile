@@ -11,10 +11,12 @@ import { useState, useEffect } from "react";
 import React from "react";
 import { FontAwesome } from "@expo/vector-icons"; // Import FontAwesome
 const PlaceholderImage = require("../../assets/images/serbuk-logo.png");
+import { useRouter } from "expo-router";
 
 export default function Index() {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
+  const router = useRouter(); // Panggil useRouter di tingkat atas
 
   // Fetch data from the news API
   useEffect(() => {
@@ -59,7 +61,10 @@ export default function Index() {
         {/* Menu Section with FontAwesome Icons */}
         <View style={styles.menu}>
           <View style={styles.submenu}>
-            <TouchableOpacity style={styles.submenuItem} onPress={() => {}}>
+            <TouchableOpacity
+              style={styles.submenuItem}
+              onPress={() => router.push("/keanggotaan")} // Gunakan router di sini
+            >
               <FontAwesome name="user-circle-o" size={24} color="#000" />
               <Text style={styles.menuText}>Keanggotaan</Text>
             </TouchableOpacity>
