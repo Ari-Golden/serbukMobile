@@ -5,22 +5,30 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 export default function TabLayout() {
   return (
     <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: "#ffd33d",
-        headerStyle: {
-          backgroundColor: "#25292e",
-        },
-        headerShadowVisible: false,
-        headerTintColor: "#fff",
-        tabBarStyle: {
-          backgroundColor: "#25292e",
-        },
-      }}
+    screenOptions={{
+      
+      headerBackground: () => null,
+      tabBarActiveTintColor: "#ffd33d",
+      headerStyle: {
+        backgroundColor: "#25292e",
+      },
+      headerShadowVisible: false,      
+      tabBarStyle: {
+        backgroundColor: "#25292e",
+      },
+    }}
     >
       <Tabs.Screen
         name="index"
         options={{
           title: "Home",
+          headerTitleStyle: {
+            color: "#F12323",
+          },
+          headerBackgroundContainerStyle: {
+            backgroundColor: "#F12323",
+            
+          },
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
               name={focused ? "home-sharp" : "home-outline"}
@@ -33,6 +41,12 @@ export default function TabLayout() {
       <Tabs.Screen
         name="about"
         options={{
+          headerTitleStyle: {
+            color: "#F12323",
+          },
+          headerBackgroundContainerStyle: {
+            backgroundColor: "#F12323"            
+          },
           title: "About",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
@@ -48,6 +62,12 @@ export default function TabLayout() {
       <Tabs.Screen
         name="profile"
         options={{
+          headerTitleStyle: {
+            color: "#F12323",
+          },
+          headerBackgroundContainerStyle: {
+            backgroundColor: "#F12323"
+          },
           title: "Profile",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons

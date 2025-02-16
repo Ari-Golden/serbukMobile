@@ -10,6 +10,8 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="keanggotaan" options={{ headerShown: false }} />
+        <Stack.Screen name="advokasi" options={{ headerShown: false }} />
+        <Stack.Screen name="keuangan" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />

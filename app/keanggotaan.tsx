@@ -1,21 +1,21 @@
-import { StyleSheet, Text, View, TextInput, FlatList } from 'react-native'
-import React, { useState } from 'react'
+import { StyleSheet, Text, View, TextInput, FlatList } from "react-native";
+import React, { useState } from "react";
 import { Image } from "expo-image";
 const PlaceholderImage = require("../assets/images/serbuk-logo.png");
 
 const keanggotaan = () => {
   // Daftar anggota untuk ditampilkan
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const [members, setMembers] = useState([
-    { id: '1', name: 'SBA Fujiset Indonesia', region: 'Jawa Barat' },
-    { id: '2', name: 'SBA Siamindo', region: 'Jawa Barat' },
-    { id: '3', name: 'SBA Meiji Food Indonesia', region: 'Jawa Barat' },
-    { id: '4', name: 'SBA PLTU Kalbar', region: 'Kalimantan Barat' },
+    { id: "1", name: "SBA Fujiset Indonesia", region: "Jawa Barat" },
+    { id: "2", name: "SBA Siamindo", region: "Jawa Barat" },
+    { id: "3", name: "SBA Meiji Food Indonesia", region: "Jawa Barat" },
+    { id: "4", name: "SBA PLTU Kalbar", region: "Kalimantan Barat" },
     // Tambahkan anggota lainnya sesuai kebutuhan
   ]);
 
   // Filter anggota berdasarkan query pencarian
-  const filteredMembers = members.filter(member =>
+  const filteredMembers = members.filter((member) =>
     member.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
@@ -50,7 +50,7 @@ const keanggotaan = () => {
       />
     </View>
   );
-}
+};
 
 export default keanggotaan;
 
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: "100%",
     height: 150,
-    backgroundColor: "#F12323",
+    // backgroundColor: "#F12323",
     padding: 10,
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,
@@ -79,13 +79,13 @@ const styles = StyleSheet.create({
   searchInput: {
     height: 40,
     width: "80%",
-    borderColor: '#ccc',
+    borderColor: "#ccc",
     borderWidth: 1,
     borderRadius: 8,
     paddingLeft: 10,
     marginBottom: 20,
     marginTop: 10,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
   memberList: {
     paddingBottom: 20,
@@ -93,15 +93,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   memberCard: {
-    backgroundColor: '#fff',
-    flexDirection: 'row',
+    backgroundColor: "#fff",
+    flexDirection: "row",
     padding: 16,
     marginBottom: 10,
     borderRadius: 8,
     elevation: 2,
     width: "80%",
-    alignItems: 'center',
-    shadowColor: '#000',
+    alignItems: "center",
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 5,
@@ -117,11 +117,11 @@ const styles = StyleSheet.create({
   },
   memberName: {
     fontSize: 18,
-    fontWeight: 'bold',
-    color: '#333',
+    fontWeight: "bold",
+    color: "#333",
   },
   memberRegion: {
     fontSize: 14,
-    color: '#666',
+    color: "#666",
   },
 });

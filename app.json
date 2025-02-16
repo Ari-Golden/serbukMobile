@@ -7,6 +7,12 @@
     "icon": "./assets/images/logo-serbuk.jpg",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
+    "splash":{
+      "image": "./assets/images/Splashscreeen.jpg",
+      "imageWidth": 200,
+      "resizeMode": "contain",
+      "backgroundColor": "#F12323"
+    },
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true

@@ -68,11 +68,17 @@ export default function Index() {
               <FontAwesome name="user-circle-o" size={24} color="#000" />
               <Text style={styles.menuText}>Keanggotaan</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.submenuItem} onPress={() => {}}>
+            <TouchableOpacity
+              style={styles.submenuItem}
+              onPress={() => router.push("/advokasi")}
+            >
               <FontAwesome name="balance-scale" size={24} color="#000" />
               <Text style={styles.menuText}>Advokasi</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.submenuItem} onPress={() => {}}>
+            <TouchableOpacity
+              style={styles.submenuItem}
+              onPress={() => router.push("/keuangan")}
+            >
               <FontAwesome name="money" size={24} color="#000" />
               <Text style={styles.menuText}>Keuangan</Text>
             </TouchableOpacity>
@@ -105,16 +111,21 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   imageContainer: {
+    paddingTop: 0.3,
+    // elevation: 3,
+    overflow: "hidden",
     maxWidth: "100%",
     alignItems: "center",
     width: "100%",
-    height: 150,
-    backgroundColor: "#F12323",
-    padding: 10,
-    borderBottomLeftRadius: 30,
-    borderBottomRightRadius: 30,
+    height: 100,
+    // backgroundColor: "#F12323",
+
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+    marginBottom: 10,
   },
   image: {
+    paddingTop: 5,
     width: 100,
     height: 100,
     borderRadius: 18,
